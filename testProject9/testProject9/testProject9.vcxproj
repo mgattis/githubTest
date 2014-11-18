@@ -76,6 +76,8 @@
   <ItemGroup>
     <ClCompile Include="CClock.cpp" />
     <ClCompile Include="CEventManager.cpp" />
+    <ClCompile Include="CGLBuffer.cpp" />
+    <ClCompile Include="CGLBufferManager.cpp" />
     <ClCompile Include="CGLShader.cpp" />
     <ClCompile Include="CGLShaderManager.cpp" />
     <ClCompile Include="CLocation.cpp" />
@@ -86,6 +88,8 @@
   <ItemGroup>
     <ClInclude Include="CClock.hpp" />
     <ClInclude Include="CEventManager.hpp" />
+    <ClInclude Include="CGLBuffer.hpp" />
+    <ClInclude Include="CGLBufferManager.hpp" />
     <ClInclude Include="CGLShader.hpp" />
     <ClInclude Include="CGLShaderManager.hpp" />
     <ClInclude Include="CLocation.hpp" />
