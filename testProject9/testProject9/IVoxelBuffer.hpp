@@ -13,7 +13,7 @@ public:
 	~IVoxelBuffer();
 
 	int getVoxelType(int iX, int iY, int iZ);
-	void setVoxelType(int iX, int iY, int iZ, int iVoxel);
+	void setVoxelType(int iX, int iY, int iZ, int iVoxelType);
 
 	unsigned char *getVoxelArray() { return ucVoxelBuffer; }
 

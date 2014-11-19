@@ -21,7 +21,7 @@ int IVoxelBuffer::getVoxelType(int iX, int iY, int iZ) {
 	return ucVoxelBuffer[iVoxelOffset];
 }
 
-void IVoxelBuffer::setVoxelType(int iX, int iY, int iZ, int iVoxel) {
+void IVoxelBuffer::setVoxelType(int iX, int iY, int iZ, int iVoxelType) {
 	int iVoxelOffset = iX + iY * 64 + iZ * 4096;
 	int iOldType = 0;
 
@@ -29,10 +29,17 @@ void IVoxelBuffer::setVoxelType(int iX, int iY, int iZ, int iVoxel) {
 	if (iVoxelOffset > 262143) { return; }
 
 	iOldType = ucVoxelBuffer[iVoxelOffset];
-	
-	if (iOldType != iVoxel & 0xFF) {
-		ucVoxelBuffer[iVoxelOffset] = iVoxel & 0xFF;
+	iVoxelType &= 0xFF;
+	if (iOldType != iVoxelType) {
+		ucVoxelBuffer[iVoxelOffset] = iVoxelType;
 		iChanges++;
+
+		if (iVoxelType == 0) {
+			iVoxelCount--;
+		}
+		else {
+			iVoxelCount++;
+		}
 	}
 }
 
