@@ -12,10 +12,10 @@ public:
 	IVoxelBuffer();
 	~IVoxelBuffer();
 
-	int getVoxelType(int iX, int iY, int iZ);
-	void setVoxelType(int iX, int iY, int iZ, int iVoxelType);
+	int getVoxelType(int iXPos, int iYPos, int iZPos);
+	void setVoxelType(int iXPos, int iYPos, int iZPos, int iVoxelType);
 
-	unsigned char *getVoxelArray() { return ucVoxelBuffer; }
+	unsigned char *getVoxelBuffer() { return ucVoxelBuffer; }
 
 	int getVoxelCount() { return iVoxelCount; }
 	int getChanges() { return iChanges; }

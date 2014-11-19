@@ -83,6 +83,8 @@
     <ClCompile Include="CLocation.cpp" />
     <ClCompile Include="CSDLManager.cpp" />
     <ClCompile Include="CSession.cpp" />
+    <ClCompile Include="CVoxelChunk.cpp" />
+    <ClCompile Include="IVoxel.cpp" />
     <ClCompile Include="IVoxelBuffer.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -96,6 +98,8 @@
     <ClInclude Include="CLocation.hpp" />
     <ClInclude Include="CSDLManager.hpp" />
     <ClInclude Include="CSession.hpp" />
+    <ClInclude Include="CVoxelChunk.hpp" />
+    <ClInclude Include="IVoxel.hpp" />
     <ClInclude Include="IVoxelBuffer.hpp" />
     <ClInclude Include="main.hpp" />
   </ItemGroup>
