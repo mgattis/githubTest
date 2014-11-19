@@ -83,6 +83,7 @@
     <ClCompile Include="CLocation.cpp" />
     <ClCompile Include="CSDLManager.cpp" />
     <ClCompile Include="CSession.cpp" />
+    <ClCompile Include="IVoxelBuffer.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +96,7 @@
     <ClInclude Include="CLocation.hpp" />
     <ClInclude Include="CSDLManager.hpp" />
     <ClInclude Include="CSession.hpp" />
+    <ClInclude Include="IVoxelBuffer.hpp" />
     <ClInclude Include="main.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
