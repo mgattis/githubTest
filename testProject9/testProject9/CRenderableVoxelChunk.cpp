@@ -53,16 +53,14 @@ CRenderableVoxelChunk::CRenderableVoxelChunk(int iX, int iY, int iZ, IVoxelMap *
 void CRenderableVoxelChunk::initialize() {
 	for (int i = 0; i < CHUNK_XSIZE; i++) {
 		for (int j = 0; j < CHUNK_YSIZE; j++) {
-			glm::vec2 position(i, j);
-			position -= glm::vec2(CHUNK_XSIZE / 2.0, CHUNK_YSIZE / 2.0);
-			position /= glm::vec2(CHUNK_XSIZE / 2.0, CHUNK_YSIZE / 2.0);
-
-			float value = glm::simplex(position)/2.0+0.5;
-			value *= CHUNK_ZSIZE;
-			value = value / 4.0 + 16.0;
-
 			for (int k = 0; k < CHUNK_ZSIZE; k++) {
-				if (k <= value) {
+				glm::vec3 position(i, j, k);
+				position -= glm::vec3(CHUNK_XSIZE / 2.0, CHUNK_YSIZE / 2.0, CHUNK_ZSIZE / 2.0);
+				position /= glm::vec3(CHUNK_XSIZE / 2.0, CHUNK_YSIZE / 2.0, CHUNK_ZSIZE / 2.0);
+
+				float value = glm::simplex(position);
+				value -= position.z;
+				if (value > 0.0) {
 					setVoxel(i, j, k, 1);
 				}
 				else {
@@ -74,21 +72,21 @@ void CRenderableVoxelChunk::initialize() {
 }
 
 unsigned char CRenderableVoxelChunk::getWorldVoxel(int iX, int iY, int iZ) {
-	int iChunkX = iX / CHUNK_XSIZE;
-	int iChunkY = iY / CHUNK_YSIZE;
-	int iChunkZ = iZ / CHUNK_ZSIZE;
+	int iChunkX = iX >= 0 ? iX / CHUNK_XSIZE : (iX + 1) / CHUNK_XSIZE - 1;
+	int iChunkY = iY >= 0 ? iY / CHUNK_YSIZE : (iY + 1) / CHUNK_YSIZE - 1;
+	int iChunkZ = iZ >= 0 ? iZ / CHUNK_ZSIZE : (iZ + 1) / CHUNK_ZSIZE - 1;
 
-	iChunkX = iX < 0 ? iChunkX - 1 : iChunkX;
-	iChunkY = iY < 0 ? iChunkY - 1 : iChunkY;
-	iChunkZ = iZ < 0 ? iChunkZ - 1 : iChunkZ;
-
+	iX = iX < 0 ? CHUNK_XSIZE - ((-iX) % CHUNK_XSIZE) : iX % CHUNK_XSIZE;
+	iY = iY < 0 ? CHUNK_YSIZE - ((-iY) % CHUNK_YSIZE) : iY % CHUNK_YSIZE;
+	iZ = iZ < 0 ? CHUNK_ZSIZE - ((-iZ) % CHUNK_ZSIZE) : iZ % CHUNK_ZSIZE;
+	
 	if (iChunkX == chunkLocation.iX && iChunkY == chunkLocation.iY && iChunkZ == chunkLocation.iZ) {
-		return getVoxel(iX % CHUNK_XSIZE, iY % CHUNK_YSIZE, iZ % CHUNK_ZSIZE);
+		return getVoxel(iX, iY, iZ);
 	}
 	else if (map) {
 		CVoxelChunk *voxelChunk = map->getChunk(iChunkX, iChunkY, iChunkZ);
 		if (voxelChunk) {
-			return voxelChunk->getVoxel(iX % CHUNK_XSIZE, iY % CHUNK_YSIZE, iZ % CHUNK_ZSIZE);
+			return voxelChunk->getVoxel(iX, iY, iZ);
 		}
 	}
 	return 0;
@@ -228,7 +226,7 @@ void CRenderableVoxelChunk::draw() {
 
 	if (glBuffer) {
 		glPushMatrix();
-		//glTranslatef(chunkLocation.iX*CHUNK_XSIZE, chunkLocation.iY*CHUNK_YSIZE, chunkLocation.iZ*CHUNK_ZSIZE);
+		glTranslatef(chunkLocation.iX*CHUNK_XSIZE, chunkLocation.iY*CHUNK_YSIZE, chunkLocation.iZ*CHUNK_ZSIZE);
 		glBuffer->drawElements();
 		glPopMatrix();
 	}
