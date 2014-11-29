@@ -1,49 +1,75 @@
 #include "CVoxelChunk.hpp"
-#include <stdio.h>
-#include <stdlib.h>
 
 CVoxelChunk::CVoxelChunk() {
-	this->iXPos = 0;
-	this->iYPos = 0;
-	this->iZPos = 0;
+	chunkLocation.iX = 0;
+	chunkLocation.iY = 0;
+	chunkLocation.iZ = 0;
 
-	voxelBuffer = new IVoxelBuffer();
-	voxels = (IVoxel *)calloc(64 * 64 * 64, sizeof(IVoxel));
+	voxelList = (unsigned char *)calloc(CHUNK_XSIZE*CHUNK_YSIZE*CHUNK_ZSIZE, sizeof(unsigned char));
+}
 
-	for (int i = 0; i < 64; i++) {
-		for (int j = 0; j < 64; j++) {
-			for (int k = 0; k < 64; k++) {
-				int iVoxelOffset = i + j * 64 + k * 4096;
-				voxels[iVoxelOffset] = IVoxel(i, j, k, voxelBuffer);
+CVoxelChunk::CVoxelChunk(int iX, int iY, int iZ) {
+	chunkLocation.iX = iX;
+	chunkLocation.iY = iY;
+	chunkLocation.iZ = iZ;
+
+	voxelList = (unsigned char *)calloc(CHUNK_XSIZE*CHUNK_YSIZE*CHUNK_ZSIZE, sizeof(unsigned char));
+}
+
+void CVoxelChunk::setChunkLocation(int iX, int iY, int iZ) {
+	chunkLocation.iX = iX;
+	chunkLocation.iY = iY;
+	chunkLocation.iZ = iZ;
+}
+
+unsigned char CVoxelChunk::getVoxel(int iX, int iY, int iZ) {
+	int index = iX + iY*CHUNK_XSIZE + iZ*CHUNK_XSIZE*CHUNK_YSIZE;
+	if (index >= 0 && index < CHUNK_VOXELCOUNT) {
+		return voxelList[index];
+	}
+	return 0;
+}
+
+unsigned char CVoxelChunk::getVoxel(SLocation voxelLocation) {
+	int index = voxelLocation.iX + voxelLocation.iY*CHUNK_XSIZE + voxelLocation.iZ*CHUNK_XSIZE*CHUNK_YSIZE;
+	if (index >= 0 && index < CHUNK_VOXELCOUNT) {
+		return voxelList[index];
+	}
+	return 0;
+}
+
+void CVoxelChunk::setVoxel(int iX, int iY, int iZ, int iType) {
+	int index = iX + iY*CHUNK_XSIZE + iZ*CHUNK_XSIZE*CHUNK_YSIZE;
+	int oldType;
+	if (index >= 0 && index < CHUNK_VOXELCOUNT) {
+		oldType = voxelList[index];
+		if (oldType != iType) {
+			voxelList[index] = iType;
+			iEditCount++;
+			if (!iType) {
+				iVoxelCount--;
+			}
+			else if (!oldType) {
+				iVoxelCount++;
 			}
 		}
 	}
 }
 
-CVoxelChunk::CVoxelChunk(int iXPos, int iYPos, int iZPos) {
-	this->iXPos = iXPos;
-	this->iYPos = iYPos;
-	this->iZPos = iZPos;
-
-	voxelBuffer = new IVoxelBuffer();
-	voxels = (IVoxel *)calloc(64 * 64 * 64, sizeof(IVoxel));
-
-	for (int i = 0; i < 64; i++) {
-		for (int j = 0; j < 64; j++) {
-			for (int k = 0; k < 64; k++) {
-				int iVoxelOffset = i + j * 64 + k * 4096;
-				voxels[iVoxelOffset] = IVoxel(i, j, k, voxelBuffer);
+void CVoxelChunk::setVoxel(SLocation voxelLocation, int iType) {
+	int index = voxelLocation.iX + voxelLocation.iY*CHUNK_XSIZE + voxelLocation.iZ*CHUNK_XSIZE*CHUNK_YSIZE;
+	int oldType;
+	if (index >= 0 && index < CHUNK_VOXELCOUNT) {
+		oldType = voxelList[index];
+		if (oldType != iType) {
+			voxelList[index] = iType;
+			iEditCount++;
+			if (!iType) {
+				iVoxelCount--;
+			}
+			else if (!oldType) {
+				iVoxelCount++;
 			}
 		}
 	}
-}
-
-void CVoxelChunk::setCooridnates(int iXPos, int iYPos, int iZPos) {
-	this->iXPos = iXPos;
-	this->iYPos = iYPos;
-	this->iZPos = iZPos;
-}
-
-IVoxel *CVoxelChunk::getVoxel(int iXPos, int iYPos, int iZPos) {
-	return &voxels[iXPos + iYPos * 64 + iZPos * 4096];
 }

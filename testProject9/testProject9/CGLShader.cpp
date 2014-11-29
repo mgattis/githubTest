@@ -46,6 +46,9 @@ bool CGLShader::loadFragmentSourceFromFile(string filename) {
 
 bool CGLShader::buildShader() {
 	GLchar *source;
+
+	vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	
 	source = (GLchar *)vertexSource.c_str();
 	glShaderSource(vertexShader, 1, (const GLchar **)&source, NULL);
@@ -97,7 +100,7 @@ GLuint CGLShader::getUniformLocation(string uniform) {
 void CGLShader::setUniform1f(string uniform, float x) {
 	GLuint uniformLocation = getUniformLocation(uniform);
 
-	if (uniformLocation) {
+	if (uniformLocation != -1) {
 		glUniform1f(uniformLocation, x);
 	}
 }
@@ -105,7 +108,7 @@ void CGLShader::setUniform1f(string uniform, float x) {
 void CGLShader::setUniform2f(string uniform, float x, float y) {
 	GLuint uniformLocation = getUniformLocation(uniform);
 
-	if (uniformLocation) {
+	if (uniformLocation != -1) {
 		glUniform2f(uniformLocation, x, y);
 	}
 }
@@ -113,7 +116,7 @@ void CGLShader::setUniform2f(string uniform, float x, float y) {
 void CGLShader::setUniform3f(string uniform, float x, float y, float z) {
 	GLuint uniformLocation = getUniformLocation(uniform);
 
-	if (uniformLocation) {
+	if (uniformLocation != -1) {
 		glUniform3f(uniformLocation, x, y, z);
 	}
 }
@@ -121,7 +124,7 @@ void CGLShader::setUniform3f(string uniform, float x, float y, float z) {
 void CGLShader::setUniform4f(string uniform, float x, float y, float z, float w) {
 	GLuint uniformLocation = getUniformLocation(uniform);
 
-	if (uniformLocation) {
+	if (uniformLocation != -1) {
 		glUniform4f(uniformLocation, x, y, z, w);
 	}
 }

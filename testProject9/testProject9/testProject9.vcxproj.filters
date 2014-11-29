@@ -45,13 +45,13 @@
     <ClCompile Include="CGLBufferManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IVoxelBuffer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IVoxel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CVoxelChunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IVoxelMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CRenderableVoxelChunk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,13 +86,13 @@
     <ClInclude Include="CGLBufferManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IVoxelBuffer.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IVoxel.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CVoxelChunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IVoxelMap.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CRenderableVoxelChunk.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

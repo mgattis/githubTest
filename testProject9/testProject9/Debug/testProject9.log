@@ -1,9 +1,90 @@
-﻿Build started 11/18/2014 8:22:24 PM.
-     1>Project "C:\Users\Matthew\Documents\GitHub\githubTest\testProject9\testProject9\testProject9.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         testProject9.vcxproj -> C:\Users\Matthew\Documents\GitHub\githubTest\testProject9\Debug\testProject9.exe
-     1>Done Building Project "C:\Users\Matthew\Documents\GitHub\githubTest\testProject9\testProject9\testProject9.vcxproj" (Build target(s)).
+﻿Build started 11/29/2014 8:50:08 AM.
+     1>Project "E:\GitHub\githubTest\testProject9\testProject9\testProject9.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I".\dev\glew-1.10.0\include" /I.\dev\glm /I".\dev\SDL2-2.0.3\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CClock.cpp CGLBuffer.cpp CGLBufferManager.cpp CGLShader.cpp CGLShaderManager.cpp CLocation.cpp CRenderableVoxelChunk.cpp CSDLManager.cpp CSession.cpp CVoxelChunk.cpp IVoxelMap.cpp main.cpp
+         CClock.cpp
+     1>e:\github\githubtest\testproject9\testproject9\cclock.cpp(10): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Generating Code...
+         Compiling...
+         main.cpp
+         IVoxelMap.cpp
+         CVoxelChunk.cpp
+         CSession.cpp
+     1>e:\github\githubtest\testproject9\testproject9\csession.cpp(36): warning C4244: 'argument' : conversion from 'double' to 'GLsizei', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\csession.cpp(55): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\csession.cpp(86): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\csession.cpp(87): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         CSDLManager.cpp
+     1>e:\github\githubtest\testproject9\testproject9\csdlmanager.cpp(55): warning C4101: 'height' : unreferenced local variable
+     1>e:\github\githubtest\testproject9\testproject9\csdlmanager.cpp(55): warning C4101: 'width' : unreferenced local variable
+         CRenderableVoxelChunk.cpp
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(60): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(62): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(141): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(144): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(144): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(146): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(146): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(148): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(148): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(152): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(152): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(155): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(155): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(157): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(159): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(159): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(163): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(166): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(166): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(168): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(168): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(170): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(170): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(174): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(174): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(177): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(177): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(179): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(181): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(181): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(185): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(188): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(188): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(190): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(190): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(192): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(192): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(196): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(196): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(199): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(199): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(201): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(203): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>e:\github\githubtest\testproject9\testproject9\crenderablevoxelchunk.cpp(203): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+         CLocation.cpp
+         CGLShaderManager.cpp
+         CGLShader.cpp
+         CGLBufferManager.cpp
+         CGLBuffer.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GitHub\githubTest\testProject9\Debug\testProject9.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\dev\glew-1.10.0\lib\Release\Win32" /LIBPATH:".\dev\SDL2-2.0.3\lib\x86" SDL2main.lib SDL2.lib opengl32.lib glu32.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\GitHub\githubTest\testProject9\Debug\testProject9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\GitHub\githubTest\testProject9\Debug\testProject9.lib" /MACHINE:X86 Debug\CClock.obj
+         Debug\CEventManager.obj
+         Debug\CGLBuffer.obj
+         Debug\CGLBufferManager.obj
+         Debug\CGLShader.obj
+         Debug\CGLShaderManager.obj
+         Debug\CLocation.obj
+         Debug\CRenderableVoxelChunk.obj
+         Debug\CSDLManager.obj
+         Debug\CSession.obj
+         Debug\CVoxelChunk.obj
+         Debug\IVoxelMap.obj
+         Debug\main.obj
+         testProject9.vcxproj -> E:\GitHub\githubTest\testProject9\Debug\testProject9.exe
+     1>Done Building Project "E:\GitHub\githubTest\testProject9\testProject9\testProject9.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.27
+Time Elapsed 00:00:10.47

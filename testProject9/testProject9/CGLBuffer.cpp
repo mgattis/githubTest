@@ -39,7 +39,7 @@ bool CGLBuffer::setIndexData(GLuint *indices, int count) {
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
 	shader->useProgram(true);
 
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, count*sizeof(GLfloat), indices, GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, count*sizeof(GLuint), indices, GL_STATIC_DRAW);
 	drawCount = count;
 
 	return true;
@@ -69,4 +69,14 @@ void CGLBuffer::drawElements() {
 
 		glDrawElements(drawMode, drawCount, GL_UNSIGNED_INT, (const GLvoid *)(drawOffset*sizeof(GLuint)));
 	}
+}
+
+void CGLBuffer::clear() {
+	glDeleteBuffers(1, &vbo);
+	glDeleteBuffers(1, &ebo);
+	glDeleteVertexArrays(1, &vao);
+
+	glGenBuffers(1, &vbo);
+	glGenBuffers(1, &ebo);
+	glGenVertexArrays(1, &vao);
 }

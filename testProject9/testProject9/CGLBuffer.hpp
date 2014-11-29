@@ -24,7 +24,7 @@ public:
 	bool setVertexData(GLfloat *vertices, int count);
 	bool setIndexData(GLuint *indices, int count);
 	bool setAttribute(string attrib, int count, int stride, int offset);
-	
+
 	void setDrawMode(GLenum drawMode) { this->drawMode = drawMode; }
 	void setDrawSize(GLenum drawCount) { this->drawCount = drawCount; }
 	void setDrawOffset(GLenum drawOffset) { this->drawOffset = drawOffset; }
@@ -39,6 +39,8 @@ public:
 	GLuint getVertexBufferObject() { return vbo; }
 	GLuint getVertexArrayObject() { return vao; }
 	GLuint getElementBufferObject() { return ebo; }
+	
+	void clear();
 };
 
 #endif /* !_CGLBUFFER_HPP */

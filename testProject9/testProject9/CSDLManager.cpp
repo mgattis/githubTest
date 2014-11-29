@@ -7,6 +7,18 @@ CSDLManager::CSDLManager() {
 
 	sdlWindow = 0;
 	windowResize(800, 600);
+
+	GLenum result = glewInit();
+	if (result != GLEW_OK) {
+		std::clog << "[ERROR] <CSDLManager>: GLEW initialization failed." << std::endl;
+		exit(1);
+	}
+
+	if (!glewIsSupported("GL_VERSION_2_0")) {
+		std::clog << "[ERROR] <CSDLManager>: OpenGL 2.0 not supported." << std::endl;
+		exit(1);
+	}
+
 	std::clog << "[INFO] <CSDLManager>: Instance created." << std::endl;
 }
 

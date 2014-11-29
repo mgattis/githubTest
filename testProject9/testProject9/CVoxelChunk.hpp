@@ -1,32 +1,37 @@
-#ifndef _IVOXELCHUNK_HPP
-#define _IVOXELCHUNK_HPP
+#ifndef _CVOXELCHUNK_HPP
+#define _CVOXELCHUNK_HPP
 #include "main.hpp"
-#include "IVoxelBuffer.hpp"
-#include "IVoxel.hpp"
+
+typedef struct _SLocation {
+	int iX;
+	int iY;
+	int iZ;
+}SLocation;
 
 class CVoxelChunk {
-private:
-	IVoxelBuffer *voxelBuffer;
-	IVoxel *voxels;
-
-	int iXPos;
-	int iYPos;
-	int iZPos;
+protected:
+	unsigned char *voxelList;
+	SLocation chunkLocation;
+	int iVoxelCount;
+	int iEditCount;
 
 public:
 	CVoxelChunk();
-	CVoxelChunk(int iXPos, int iYPos, int iZPos);
+	CVoxelChunk(int iX, int iY, int iZ);
+	
+	void setChunkLocation(int iX, int iY, int iZ);
+	void setChunkLocation(SLocation chunkLocation) { this->chunkLocation = chunkLocation; }
 
-	void setCooridnates(int iXPos, int iYPos, int iZPos);
+	int getX() { return chunkLocation.iX; }
+	int getY() { return chunkLocation.iY; }
+	int getZ() { return chunkLocation.iZ; }
+	SLocation getChunkLocation() { return chunkLocation; }
 
-	int getXPos() { return iXPos; }
-	int getYPos() { return iYPos; }
-	int getZPos() { return iZPos; }
+	unsigned char getVoxel(int iX, int iY, int iZ);
+	unsigned char getVoxel(SLocation voxelLocation);
 
-	IVoxel *getVoxel(int iXPos, int iYPos, int iZPos);
-
-	IVoxel *getAllVoxels() { return voxels; }
-	IVoxelBuffer *getVoxelBuffer() { return voxelBuffer; }
+	void setVoxel(int iX, int iY, int iZ, int iType);
+	void setVoxel(SLocation voxelLocation, int iType);
 };
 
-#endif /* !_IVOXELCHUNK_HPP */
+#endif

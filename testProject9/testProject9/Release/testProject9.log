@@ -1,0 +1,86 @@
+﻿Build started 11/29/2014 4:39:11 AM.
+     1>Project "E:\GitHub\githubTest\testProject9\testProject9\testProject9.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I".\dev\glew-1.10.0\include" /I.\dev\glm /I".\dev\SDL2-2.0.3\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CClock.cpp CEventManager.cpp CGLBuffer.cpp CGLBufferManager.cpp CGLShader.cpp CGLShaderManager.cpp CLocation.cpp CRenderableVoxelChunk.cpp CSDLManager.cpp CSession.cpp CVoxelChunk.cpp IVoxelMap.cpp main.cpp
+         CClock.cpp
+     1>CClock.cpp(10): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         CEventManager.cpp
+         CGLBuffer.cpp
+         CGLBufferManager.cpp
+         CGLShader.cpp
+         CGLShaderManager.cpp
+         CLocation.cpp
+         CRenderableVoxelChunk.cpp
+     1>CRenderableVoxelChunk.cpp(132): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(135): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(135): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(137): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(137): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(139): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(139): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(143): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(143): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(146): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(146): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(148): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(150): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(150): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(154): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(157): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(157): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(159): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(159): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(161): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(161): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(165): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(165): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(168): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(168): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(170): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(172): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(172): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(176): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(179): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(179): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(181): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(181): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(183): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(183): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(187): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(187): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(190): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(190): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(192): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(194): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>CRenderableVoxelChunk.cpp(194): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+         CSDLManager.cpp
+     1>CSDLManager.cpp(55): warning C4101: 'height' : unreferenced local variable
+     1>CSDLManager.cpp(55): warning C4101: 'width' : unreferenced local variable
+         CSession.cpp
+     1>CSession.cpp(91): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>CSession.cpp(92): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         CVoxelChunk.cpp
+         IVoxelMap.cpp
+         main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GitHub\githubTest\testProject9\Release\testProject9.exe" /NOLOGO /LIBPATH:".\dev\glew-1.10.0\lib\Release\Win32" /LIBPATH:".\dev\SDL2-2.0.3\lib\x86" SDL2main.lib SDL2.lib opengl32.lib glu32.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\GitHub\githubTest\testProject9\Release\testProject9.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\GitHub\githubTest\testProject9\Release\testProject9.lib" /MACHINE:X86 /SAFESEH Release\CClock.obj
+         Release\CEventManager.obj
+         Release\CGLBuffer.obj
+         Release\CGLBufferManager.obj
+         Release\CGLShader.obj
+         Release\CGLShaderManager.obj
+         Release\CLocation.obj
+         Release\CRenderableVoxelChunk.obj
+         Release\CSDLManager.obj
+         Release\CSession.obj
+         Release\CVoxelChunk.obj
+         Release\IVoxelMap.obj
+         Release\main.obj
+         Generating code
+         Finished generating code
+         testProject9.vcxproj -> E:\GitHub\githubTest\testProject9\Release\testProject9.exe
+     1>Done Building Project "E:\GitHub\githubTest\testProject9\testProject9\testProject9.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.93
