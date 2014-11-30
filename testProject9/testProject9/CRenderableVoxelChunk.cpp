@@ -59,7 +59,7 @@ void CRenderableVoxelChunk::initialize() {
 				position /= glm::vec3(CHUNK_XSIZE / 2.0, CHUNK_YSIZE / 2.0, CHUNK_ZSIZE / 2.0);
 
 				float value = glm::simplex(position);
-				value -= position.z;
+				//value -= position.z;
 				if (value > 0.0) {
 					setVoxel(i, j, k, 1);
 				}
