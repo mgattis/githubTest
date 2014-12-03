@@ -74,6 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CCamera.cpp" />
     <ClCompile Include="CClock.cpp" />
     <ClCompile Include="CEventManager.cpp" />
     <ClCompile Include="CGLBuffer.cpp" />
@@ -89,6 +90,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CCamera.hpp" />
     <ClInclude Include="CClock.hpp" />
     <ClInclude Include="CEventManager.hpp" />
     <ClInclude Include="CGLBuffer.hpp" />

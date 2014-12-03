@@ -1,30 +1,30 @@
 #include "CLocation.hpp"
 
 CLocation::CLocation() {
-	position = glm::vec2(0.0, 0.0);
-	velocity = glm::vec2(0.0, 0.0);
-	acceleration = glm::vec2(0.0, 0.0);
+	position = glm::vec3(0.0, 0.0, 0.0);
+	velocity = glm::vec3(0.0, 0.0, 0.0);
+	acceleration = glm::vec3(0.0, 0.0, 0.0);
 	angle = glm::vec3(0.0, 0.0, 0.0);
 }
 
-CLocation::CLocation(glm::vec2 position) {
+CLocation::CLocation(glm::vec3 position) {
 	this->position = position;
-	velocity = glm::vec2(0.0, 0.0);
-	acceleration = glm::vec2(0.0, 0.0);
+	velocity = glm::vec3(0.0, 0.0, 0.0);
+	acceleration = glm::vec3(0.0, 0.0, 0.0);
 	angle = glm::vec3(0.0, 0.0, 0.0);
 }
 
-CLocation::CLocation(float x, float y) {
-	position = glm::vec2(x, y);
-	velocity = glm::vec2(0.0, 0.0);
-	acceleration = glm::vec2(0.0, 0.0);
+CLocation::CLocation(float x, float y, float z) {
+	position = glm::vec3(x, y, z);
+	velocity = glm::vec3(0.0, 0.0, 0.0);
+	acceleration = glm::vec3(0.0, 0.0, 0.0);
 	angle = glm::vec3(0.0, 0.0, 0.0);
 }
 
 void CLocation::zero() {
-	position = glm::vec2(0.0, 0.0);
-	velocity = glm::vec2(0.0, 0.0);
-	acceleration = glm::vec2(0.0, 0.0);
+	position = glm::vec3(0.0, 0.0, 0.0);
+	velocity = glm::vec3(0.0, 0.0, 0.0);
+	acceleration = glm::vec3(0.0, 0.0, 0.0);
 	angle = glm::vec3(0.0, 0.0, 0.0);
 }
 

@@ -56,10 +56,11 @@ void CRenderableVoxelChunk::initialize() {
 			for (int k = 0; k < CHUNK_ZSIZE; k++) {
 				glm::vec3 position(i, j, k);
 				position -= glm::vec3(CHUNK_XSIZE / 2.0, CHUNK_YSIZE / 2.0, CHUNK_ZSIZE / 2.0);
+				position += glm::vec3(chunkLocation.iX * CHUNK_XSIZE, chunkLocation.iY * CHUNK_YSIZE, chunkLocation.iZ * CHUNK_ZSIZE);
 				position /= glm::vec3(CHUNK_XSIZE / 2.0, CHUNK_YSIZE / 2.0, CHUNK_ZSIZE / 2.0);
 
 				float value = glm::simplex(position);
-				//value -= position.z;
+				value -= position.z * 2.0;
 				if (value > 0.0) {
 					setVoxel(i, j, k, 1);
 				}
